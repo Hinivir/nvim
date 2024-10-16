@@ -10,6 +10,10 @@
         };
       };
       cursorword = {};
+      icons = {
+        default = true;
+      };
+      mockDevIcons = {};
     };
   };
 }

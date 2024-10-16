@@ -53,6 +53,7 @@
     ./ui/noice.nix
     ./ui/nvim-notify.nix
     ./ui/nui.nix
+    ./ui/web-devicons.nix
 
     ./utils/better-escape.nix
     ./utils/neocord.nix
