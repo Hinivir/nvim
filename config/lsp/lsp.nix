@@ -8,7 +8,7 @@
       capabilities = "offsetEncoding =  'utf-16'";
       servers = {
         clangd = {enable = true;};
-        lua-ls = {
+        lua_ls = {
           enable = true;
           extraOptions = {
             settings = {
@@ -24,8 +24,8 @@
             };
           };
         };
-        nil-ls = {enable = true;};
-        tsserver = {
+        nil_ls = {enable = true;};
+        ts_ls = {
           enable = false;
           filetypes = ["javascript" "javascriptreact" "typescript" "typescriptreact"];
           extraOptions = {
@@ -57,9 +57,9 @@
         };
         eslint = {enable = true;};
         pyright = {enable = true;};
-        ruff-lsp = {enable = true;};
+        ruff_lsp = {enable = true;};
 
-        rust-analyzer = {
+        rust_analyzer = {
           enable = true;
           installCargo = true;
           installRustc = true;
