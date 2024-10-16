@@ -1,6 +1,6 @@
 {
   plugins.better-escape = {
     enable = true;
-    timeout = 200;
+    settings.timeout = 200;
   };
 }
