@@ -79,6 +79,9 @@
             };
           };
         };
+        solidity = {
+          enable = true;
+        };
       };
       # keymaps = {
       #   silent = true;

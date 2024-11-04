@@ -16,6 +16,7 @@
         nix = ["alejandra"];
         markdown = [["prettierd" "prettier"]];
         rust = ["rustfmt"];
+        solidity = ["prettier"];
       };
     };
   };
