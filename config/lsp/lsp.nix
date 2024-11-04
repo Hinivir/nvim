@@ -79,7 +79,7 @@
             };
           };
         };
-        solidity = {
+        solidity_ls = {
           enable = true;
         };
       };
