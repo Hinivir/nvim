@@ -81,6 +81,7 @@
         };
         solidity_ls = {
           enable = true;
+          package = null;
         };
       };
       # keymaps = {
