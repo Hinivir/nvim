@@ -7,7 +7,9 @@
       enable = true;
       capabilities = "offsetEncoding =  'utf-16'";
       servers = {
-        clangd = {enable = true;};
+        clangd = {
+          enable = true;
+        };
         lua_ls = {
           enable = true;
           extraOptions = {
@@ -19,15 +21,24 @@
                 telemetry = {
                   enabled = false;
                 };
-                hint = {enable = true;};
+                hint = {
+                  enable = true;
+                };
               };
             };
           };
         };
-        nil_ls = {enable = true;};
+        nil_ls = {
+          enable = true;
+        };
         ts_ls = {
           enable = false;
-          filetypes = ["javascript" "javascriptreact" "typescript" "typescriptreact"];
+          filetypes = [
+            "javascript"
+            "javascriptreact"
+            "typescript"
+            "typescriptreact"
+          ];
           extraOptions = {
             settings = {
               javascript = {
@@ -55,9 +66,12 @@
             };
           };
         };
-        eslint = {enable = true;};
-        pyright = {enable = true;};
-        ruff_lsp = {enable = true;};
+        eslint = {
+          enable = true;
+        };
+        pyright = {
+          enable = true;
+        };
 
         rust_analyzer = {
           enable = true;

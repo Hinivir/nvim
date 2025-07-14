@@ -23,7 +23,6 @@
     ./git/lazygit.nix
     # ./git/neogit.nix
 
-    ./languages/nvim-jdtls.nix
     ./languages/nvim-lint.nix
     ./languages/typescript-tools-nvim.nix
     ./languages/treesitter/treesitter.nix
@@ -64,7 +63,7 @@
     ./utils/markdown-preview.nix
     ./utils/mini.nix
     ./utils/neodev.nix
-    ./utils/neotest.nix
+    #./utils/neotest.nix
     ./utils/nvim-autopairs.nix
     ./utils/nvim-colorizer.nix
     ./utils/nvim-surround.nix
