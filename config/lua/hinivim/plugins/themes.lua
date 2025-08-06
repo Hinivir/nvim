@@ -46,6 +46,7 @@ return {
 				},
 			})
 
+      print("hello")
 			vim.cmd.colorscheme("catppuccin")
 		end,
 	},
