@@ -23,12 +23,6 @@ return {
 							warnings = { "italic" },
 							information = { "italic" },
 						},
-						underlines = {
-							errors = { "undercurl" },
-							hints = { "undercurl" },
-							warnings = { "undercurl" },
-							information = { "undercurl" },
-						},
 					},
 					telescope = {
 						enabled = true,
@@ -41,10 +35,6 @@ return {
 					indent_blankline = {
 						enabled = true,
 						colored_indent_levels = true,
-					},
-					navic = {
-						enabled = true,
-						custom_bg = "NONE",
 					},
 					gitsigns = true,
 					markdown = true,
