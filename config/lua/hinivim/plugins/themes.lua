@@ -10,42 +10,45 @@ return {
 					light = "latte",
 					dark = "mocha",
 				},
-				term_colors = true,
+				transparent_background = false,
+				float = {
+					transparent = false,
+					solid = false,
+				},
+				term_colors = false,
+				no_italic = false, -- Force no italic
+				no_bold = false, -- Force no bold
+				no_underline = false, -- Force no underline
+				styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+					comments = { "italic" }, -- Change the style of comments
+					conditionals = { "italic" },
+					loops = {},
+					functions = {},
+					keywords = {},
+					strings = {},
+					variables = {},
+					numbers = {},
+					booleans = {},
+					properties = {},
+					types = {},
+					operators = {},
+				},
+				color_overrides = {},
+				custom_highlights = {},
+				default_integrations = true,
+				auto_integrations = false,
 				integrations = {
-					alpha = true,
-					treesitter = true,
-					treesitter_context = false,
-					native_lsp = {
-						enabled = true,
-						virtual_text = {
-							errors = { "italic" },
-							hints = { "italic" },
-							warnings = { "italic" },
-							information = { "italic" },
-						},
-					},
-					telescope = {
-						enabled = true,
-					},
-					cmp = false,
-					blink_cmp = true,
-					lsp_trouble = true,
-					nvimtree = true,
-					which_key = false,
-					indent_blankline = {
-						enabled = true,
-						colored_indent_levels = true,
-					},
+					cmp = true,
 					gitsigns = true,
-					markdown = true,
-					render_markdown = false,
-					harpoon = true,
-					symbols_outline = true,
-					ts_rainbow = true,
-					notify = true,
+					nvimtree = true,
+					treesitter = true,
+					notify = false,
+					mini = {
+						enabled = true,
+						indentscope_color = "",
+					},
 				},
 			})
-
       print("hello")
 			vim.cmd.colorscheme("catppuccin")
 		end,
