@@ -125,6 +125,13 @@
             mini-icons
             todo-comments-nvim
             indent-blankline-nvim
+            neo-tree-nvim
+            mini-surround
+            undotree
+            direnv-vim
+            cord-nvim
+            gitsings-nvim
+            nui-nvim
             lz-n
           ];
 
