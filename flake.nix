@@ -122,6 +122,10 @@
             fidget-nvim
             mini-nvim
             nvim-colorizer-lua
+            mini-icons
+            todo-comments-nvim
+            indent-blankline-nvim
+            lz-n
           ];
 
           # these are plugins that are loaded on demand by your configuration
