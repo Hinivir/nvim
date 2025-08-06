@@ -130,7 +130,7 @@
             undotree
             direnv-vim
             cord-nvim
-            gitsings-nvim
+            gitsigns-nvim
             nui-nvim
             lz-n
           ];
