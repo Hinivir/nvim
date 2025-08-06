@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "gift-wrap": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1753903035,
+        "narHash": "sha256-dWn9oY2kSh6ZtQWH6Bs6UZR+wsLj0Pctj9AB0U4hlRA=",
+        "owner": "tgirlcloud",
+        "repo": "gift-wrap",
+        "rev": "48a6f04e6fa2d2dd150118a9dff73b30eb42df87",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tgirlcloud",
+        "repo": "gift-wrap",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 315532800,
+        "narHash": "sha256-OkdcTURtC+o0elH57msXb5k9K5/kVw9t5YLwT/cixP8=",
+        "rev": "cab778239e705082fe97bb4990e0d24c50924c04",
+        "type": "tarball",
+        "url": "https://releases.nixos.org/nixpkgs/nixpkgs-25.11pre839900.cab778239e70/nixexprs.tar.xz"
+      },
+      "original": {
+        "type": "tarball",
+        "url": "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.xz"
+      }
+    },
+    "root": {
+      "inputs": {
+        "gift-wrap": "gift-wrap",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
