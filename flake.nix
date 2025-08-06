@@ -83,11 +83,22 @@
         }
       );
 
+      devShells = forAllSystems (pkgs: {
+        default = pkgs.mkShellNoCC {
+          packages = [
+            self.formatter.${pkgs.stdenv.hostPlatform.system}
+            pkgs.selene
+            pkgs.stylua
+            pkgs.lua-language-server
+            pkgs.taplo
+            pkgs.nvfetcher
+          ];
+        };
+      });
+
       packages = forAllSystems (pkgs: {
         nvim = gift-wrap.legacyPackages.${pkgs.system}.wrapNeovim {
           pname = "hinivim";
-
-          versionSuffix = self.shortRev or self.dirtyShortRev or "unknown";
 
           basePackage = pkgs.neovim-unwrapped;
 
@@ -129,5 +140,6 @@
           ];
         };
       });
+      defaultPackage = forAllSystems (pkgs: self.packages.${pkgs.system}.nvim);
     };
 }
