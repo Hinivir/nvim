@@ -132,6 +132,7 @@
             cord-nvim
             gitsigns-nvim
             nui-nvim
+            catppuccin-nvim
             lz-n
           ];
 
