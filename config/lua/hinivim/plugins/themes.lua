@@ -16,10 +16,10 @@ return {
 					solid = false,
 				},
 				term_colors = false,
-				no_italic = false, -- Force no italic
-				no_bold = false, -- Force no bold
-				styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-					comments = { "italic" }, -- Change the style of comments
+				no_italic = false,
+				no_bold = false,
+				styles = {
+					comments = { "italic" },
 					conditionals = { "italic" },
 				},
 				default_integrations = true,
