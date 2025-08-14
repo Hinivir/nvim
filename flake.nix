@@ -6,6 +6,17 @@
       url = "github:tgirlcloud/gift-wrap";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    neovim-nightly-overlay = {
+      url = "github:nix-community/neovim-nightly-overlay";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        hercules-ci-effects.follows = "";
+        flake-compat.follows = "";
+        git-hooks.follows = "";
+        treefmt-nix.follows = "";
+      };
+    };
   };
 
   outputs =
@@ -13,6 +24,8 @@
       self,
       nixpkgs,
       gift-wrap,
+      neovim-nightly-overlay,
+      ...
     }:
     let
       inherit (nixpkgs) lib;
@@ -25,63 +38,14 @@
             import nixpkgs {
               inherit system;
               config.allowUnfree = true;
-              overlays = [ ];
+              overlays = [ neovim-nightly-overlay.overlays.default ];
             }
           )
         );
+
     in
     {
-      formatter = forAllSystems (
-        pkgs:
-        pkgs.treefmt.withConfig {
-          runtimeInputs = with pkgs; [
-            deadnix
-            nixfmt-rfc-style
-            statix
-            stylua
-            taplo
-
-            (writeShellScriptBin "statix-fix" ''
-              for file in "$@"; do
-                ${lib.getExe statix} fix "$file"
-              done
-            '')
-          ];
-
-          settings = {
-            on-unmatched = "info";
-            tree-root-file = "flake.nix";
-
-            formatter = {
-              deadnix = {
-                command = "deadnix";
-                includes = [ "*.nix" ];
-              };
-
-              nixfmt = {
-                command = "nixfmt";
-                includes = [ "*.nix" ];
-              };
-
-              statix = {
-                command = "statix-fix";
-                includes = [ "*.nix" ];
-              };
-
-              stylua = {
-                command = "stylua";
-                includes = [ "*.lua" ];
-              };
-
-              taplo = {
-                command = "taplo";
-                options = "format";
-                includes = [ "*.toml" ];
-              };
-            };
-          };
-        }
-      );
+      formatter = forAllSystems (pkgs: pkgs.treefmt.withConfig ( import ./format.nix { inherit pkgs } ));
 
       devShells = forAllSystems (pkgs: {
         default = pkgs.mkShellNoCC {
@@ -152,6 +116,5 @@
           ];
         };
       });
-      defaultPackage = forAllSystems (pkgs: self.packages.${pkgs.system}.nvim);
     };
 }
