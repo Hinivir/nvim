@@ -45,7 +45,7 @@
 
     in
     {
-      formatter = forAllSystems (pkgs: pkgs.treefmt.withConfig ( import ./format.nix { inherit pkgs } ));
+      formatter = forAllSystems (pkgs: pkgs.treefmt.withConfig (import ./format.nix { inherit pkgs; }));
 
       devShells = forAllSystems (pkgs: {
         default = pkgs.mkShellNoCC {
