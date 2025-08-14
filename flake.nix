@@ -116,5 +116,6 @@
           ];
         };
       });
+      defaultPackage = forAllSystems (pkgs: self.packages.${pkgs.system}.nvim);
     };
 }
