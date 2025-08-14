@@ -97,17 +97,6 @@ return {
   },
 
   {
-    "cord.nvim",
-    event = "VimEnter",
-    after = function()
-      require("cord").setup({
-        editor = { icon = "https://raw.githubusercontent.com/IogaMaster/neovim/main/.github/assets/nixvim-dark.webp" },
-        display = { swap_icons = true },
-      })
-    end,
-  },
-
-  {
     "gitsigns.nvim",
     event = "BufReadPost",
     after = function()
@@ -119,4 +108,3 @@ return {
     "nui.nvim",
   },
 }
-
