@@ -93,7 +93,6 @@
             mini-surround
             undotree
             direnv-vim
-            cord-nvim
             gitsigns-nvim
             nui-nvim
             catppuccin-nvim
