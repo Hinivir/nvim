@@ -84,19 +84,6 @@ return {
   },
 
   {
-    "direnv.nvim",
-    event = "VimEnter",
-    enabled = function()
-      return vim.fn.executable("direnv") == 1
-    end,
-    after = function()
-      require("direnv").setup({
-        autoload_direnv = true,
-      })
-    end,
-  },
-
-  {
     "gitsigns.nvim",
     event = "BufReadPost",
     after = function()
